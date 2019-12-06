@@ -6,12 +6,14 @@ using TMPro;
 
 public class mnkValues : MonoBehaviour
 {
-    public static List<TMP_Dropdown> mnkDropdown = new List<TMP_Dropdown>();
+    
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         TMP_Dropdown dp = this.GetComponent<TMP_Dropdown>();
+        List<TMP_Dropdown> mnkDropdown = new List<TMP_Dropdown>();
+
         if ( dp == null)
         { 
             Debug.Log("No TMP_Dropdown Component");

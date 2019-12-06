@@ -14,8 +14,10 @@ namespace ConnectFour
 		
 		void LateUpdate()
 		{
-			float maxY = GameBoard.numRows + 2;
-			cam.orthographicSize = maxY / 2f;
+            float maxX = GameBoard.numColumns;
+			float maxY = GameBoard.numRows + 3;
+
+			cam.orthographicSize = maxY > maxX ? maxY / 2f : maxX / 2f ;
 		}
 	}
 }

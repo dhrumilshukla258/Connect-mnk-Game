@@ -8,6 +8,12 @@ using System;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject buttons;
+    public GameObject inputScene;
+    public GameObject mValue;
+    public GameObject nValue;
+    public GameObject kValue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,20 +26,13 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        GameObject buttons = this.transform.parent.gameObject;
+        Transform[] buttonChild = buttons.GetComponentsInChildren<Transform>();
+        GameObject playButton = buttonChild[1].gameObject;
+        playButton.GetComponentsInChildren<Text>()[0].color = Color.black;
 
-        //Buttons
         buttons.SetActive(false);
+        inputScene.SetActive(true);
         
-        //Convert Color of PlayButton text to Black
-        this.GetComponentsInChildren<Text>()[0].color = Color.black;
-
-
-        //MainMenuCanvas
-        GameObject mainMenu = buttons.transform.parent.gameObject;
-
-        //mnkValue Button
-        mainMenu.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void HowToPlay()
@@ -42,22 +41,12 @@ public class MainMenu : MonoBehaviour
 
     public void GoBack()
     {
-        GameObject inputScene = this.transform.parent.gameObject;
+        Transform[] inputSceneChild = inputScene.GetComponentsInChildren<Transform>();
+        GameObject goBack = inputSceneChild[20].gameObject;
+        goBack.GetComponentsInChildren<Text>()[0].color = Color.black;
 
-        //InputScene
+        buttons.SetActive(true);
         inputScene.SetActive(false);
-
-        //Convert Color of BackButton text to Black
-        this.GetComponentsInChildren<Text>()[0].color = Color.black;
-
-        //MainMenuCanvas
-        GameObject mainMenu = inputScene.transform.parent.gameObject;
-
-        //Buttons (Consist of Play,How to Play and Exit)
-        mainMenu.transform.GetChild(2).gameObject.SetActive(true);
-
-
-
     }
     public void Exit()
     {
@@ -66,17 +55,10 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        for (int i = 0; i < 3; ++i)
-        {
-            int mnkIndex = mnkValues.mnkDropdown[i].value;
-            List<TMP_Dropdown.OptionData> mnkOptions = mnkValues.mnkDropdown[0].options;
-            string value = mnkOptions[mnkIndex].text;
-      
-            if (mnkValues.mnkDropdown[i].name == "mValue") { GameBoard.numRows = Convert.ToInt32(value); }
-            if (mnkValues.mnkDropdown[i].name == "nValue") { GameBoard.numColumns = Convert.ToInt32(value); }
-            if (mnkValues.mnkDropdown[i].name == "kValue") { GameBoard.numPiecesToWin = Convert.ToInt32(value); }
-        }
-
+        
+        GameBoard.numRows = Convert.ToInt32(mValue.GetComponent<TMP_Dropdown>().options[mValue.GetComponent<TMP_Dropdown>().value].text);
+        GameBoard.numColumns = Convert.ToInt32(nValue.GetComponent<TMP_Dropdown>().options[nValue.GetComponent<TMP_Dropdown>().value].text);
+        GameBoard.numPiecesToWin = Convert.ToInt32(kValue.GetComponent<TMP_Dropdown>().options[kValue.GetComponent<TMP_Dropdown>().value].text);        
         SceneManager.LoadScene("Scenes/game_board");
     }
 

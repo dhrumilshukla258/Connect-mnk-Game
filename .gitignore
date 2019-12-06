@@ -2,3 +2,44 @@
 /.git
 .gitattributes
 .gitignore
+Assets/Connect Four/fonts.meta
+Assets/Connect Four/fonts/kenvector_future.ttf
+Assets/Connect Four/fonts/kenvector_future.ttf.meta
+Assets/Connect Four/materials.meta
+Assets/Connect Four/materials/background.mat
+Assets/Connect Four/materials/background.mat.meta
+Assets/Connect Four/materials/fieldMat.mat
+Assets/Connect Four/materials/fieldMat.mat.meta
+Assets/Connect Four/materials/pieceBlueMat.mat
+Assets/Connect Four/materials/pieceBlueMat.mat.meta
+Assets/Connect Four/materials/pieceRedMat.mat
+Assets/Connect Four/materials/pieceRedMat.mat.meta
+Assets/Connect Four/materials/sky.mat
+Assets/Connect Four/materials/sky.mat.meta
+Assets/Connect Four/prefabs/bluePiece.prefab
+Assets/Connect Four/prefabs/bluePiece.prefab.meta
+Assets/Connect Four/prefabs/field.prefab
+Assets/Connect Four/prefabs/field.prefab.meta
+Assets/Connect Four/prefabs/redPiece.prefab
+Assets/Connect Four/prefabs/redPiece.prefab.meta
+Assets/Connect Four/readme.txt
+Assets/Connect Four/readme.txt.meta
+Assets/Connect Four/scenes.meta
+Assets/Connect Four/scenes/game.unity
+Assets/Connect Four/scenes/game.unity.meta
+Assets/Connect Four/scripts.meta
+Assets/Connect Four/scripts/CameraSize.cs
+Assets/Connect Four/scripts/CameraSize.cs.meta
+Assets/Connect Four/scripts/GameController.cs
+Assets/Connect Four/scripts/GameController.cs.meta
+Assets/Connect Four/textures.meta
+Assets/Connect Four/textures/background.png
+Assets/Connect Four/textures/background.png.meta
+Assets/Connect Four/textures/field.png
+Assets/Connect Four/textures/field.png.meta
+Assets/Connect Four/textures/icon.png
+Assets/Connect Four/textures/icon.png.meta
+Assets/Connect Four/textures/pieceWhite.png
+Assets/Connect Four/textures/pieceWhite.png.meta
+Assets/Connect Four/textures/sky.png
+Assets/Connect Four/textures/sky.png.meta
