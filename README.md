@@ -1,6 +1,11 @@
 # Connect-mnk-Game
 Connect Game of variable board size with an unbeatable AI
 
-I am still working on the project so its not yet complete
-only the UI and board generation is done.
-AI element will be added using Alpha-Beta Pruning.
+The game uses UI provided in Unity Store for Connect4.
+
+The board size is Variable i.e.
+M = rows
+N = columns
+K = no. of dots need to be connected
+
+The AI uses technique of Alpha-Beta pruning.
